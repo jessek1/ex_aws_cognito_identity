@@ -1,6 +1,6 @@
 defmodule ExAws.CognitoIdentity do
   @moduledoc """
-  Operations on AWS Cognito
+  Operations on AWS Cognito Identity
   """
   @namespace "com.amazonaws.cognito.identity.model.AWSCognitoIdentityService"
 
@@ -140,9 +140,9 @@ defmodule ExAws.CognitoIdentity do
 
   *`:logins` - A set of optional name-value pairs that map provider names to provider tokens. The name-value pair will follow the syntax "provider_name": "provider_user_identifier".
 
-      Logins should not be specified when trying to get credentials for an unauthenticated identity.
+  Logins should not be specified when trying to get credentials for an unauthenticated identity.
 
-      The Logins parameter is required when using identities associated with external identity providers such as Facebook. For examples of Logins maps, see the code examples in the [External Identity Providers](https://docs.aws.amazon.com/cognito/latest/developerguide/external-identity-providers.html) section of the Amazon Cognito Developer Guide. Valid values: string to string map, key min length of 1 and max length of 128, value min length of 1 and max length of 50000.
+  The Logins parameter is required when using identities associated with external identity providers such as Facebook. For examples of Logins maps, see the code examples in the [External Identity Providers](https://docs.aws.amazon.com/cognito/latest/developerguide/external-identity-providers.html) section of the Amazon Cognito Developer Guide. Valid values: string to string map, key min length of 1 and max length of 128, value min length of 1 and max length of 50000.
   """
   def get_credentials_for_identity(identity_id, opts \\ []) do
     data =
@@ -167,19 +167,19 @@ defmodule ExAws.CognitoIdentity do
 
   *`:logins` - A set of optional name-value pairs that map provider names to provider tokens. The available provider names for Logins are as follows:
 
-      Facebook: graph.facebook.com
+  Facebook: graph.facebook.com
 
-      Amazon Cognito user pool: cognito-idp.<region>.amazonaws.com/<YOUR_USER_POOL_ID>, for example, cognito-idp.us-east-1.amazonaws.com/us-east-1_123456789.
+  Amazon Cognito user pool: cognito-idp.<region>.amazonaws.com/<YOUR_USER_POOL_ID>, for example, cognito-idp.us-east-1.amazonaws.com/us-east-1_123456789.
 
-      Google: accounts.google.com
+  Google: accounts.google.com
 
-      Amazon: www.amazon.com
+  Amazon: www.amazon.com
 
-      Twitter: api.twitter.com
+  Twitter: api.twitter.com
 
-      Digits: www.digits.com
+  Digits: www.digits.com
 
-      Valid values: string to string map, key min length of 1 and max length of 128, value min length of 1 and max length of 50000.
+  Valid values: string to string map, key min length of 1 and max length of 128, value min length of 1 and max length of 50000.
   """
   def get_id(pool_id, opts \\ []) do
     data =

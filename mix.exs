@@ -2,12 +2,12 @@ defmodule ExAws.SQS.Mixfile do
   use Mix.Project
 
   @version "1.0.0"
-  @url_github "https://github.com/jessek1/ex_aws_cognito"
+  @url_github "https://github.com/jessek1/ex_aws_cognito_identity"
 
   def project do
     [
-      app: :ex_aws_cognito,
-      name: "ExAws.Cognito-Identity",
+      app: :ex_aws_cognito_identity,
+      name: "ExAws.CognitoIdentity",
       description: "ExAws.Cognito Federated Identities service package",
       package: %{
         files: [
@@ -27,7 +27,9 @@ defmodule ExAws.SQS.Mixfile do
       elixir: "~> 1.5",
       elixirc_paths: elixirc_paths(Mix.env),
       start_permanent: Mix.env == :prod,
-      deps: deps()
+      deps: deps(),
+      source_url: @url_github,
+      homepage_url: @url_github
     ]
   end
 
@@ -55,7 +57,7 @@ defmodule ExAws.SQS.Mixfile do
   defp ex_aws() do
     case System.get_env("AWS") do
       "LOCAL" -> {:ex_aws, path: "../ex_aws"}
-      _ -> {:ex_aws, ">= 2.1.2"}
+      _ -> {:ex_aws, ">= 2.1.0"}
     end
   end
 end
