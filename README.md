@@ -1,5 +1,8 @@
 # ExAws.CognitoIdentity
 
+[![Hex version](https://img.shields.io/hexpm/v/ex_aws_cognito_identity.svg "Hex
+version")](https://hex.pm/packages/ex_aws_cognito_identity)
+
 Service module for https://github.com/ex-aws/ex_aws
 
 ## Installation
