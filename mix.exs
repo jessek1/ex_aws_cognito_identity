@@ -1,7 +1,7 @@
-defmodule ExAws.SQS.Mixfile do
+defmodule ExAws.CognitoIdentity.Mixfile do
   use Mix.Project
 
-  @version "1.0.0"
+  @version "1.1.0"
   @url_github "https://github.com/jessek1/ex_aws_cognito_identity"
 
   def project do
