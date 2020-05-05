@@ -1,7 +1,7 @@
 defmodule ExAws.CognitoIdentity.Mixfile do
   use Mix.Project
 
-  @version "1.1.0"
+  @version "1.2.0"
   @url_github "https://github.com/jessek1/ex_aws_cognito_identity"
 
   def project do
@@ -57,7 +57,7 @@ defmodule ExAws.CognitoIdentity.Mixfile do
   defp ex_aws() do
     case System.get_env("AWS") do
       "LOCAL" -> {:ex_aws, path: "../ex_aws"}
-      _ -> {:ex_aws, ">= 2.1.0"}
+      _ -> {:ex_aws, "~> 2.0"}
     end
   end
 end
