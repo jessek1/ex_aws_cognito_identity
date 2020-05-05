@@ -14,7 +14,7 @@ along with `:ex_aws` and your preferred JSON codec / http client
 def deps do
   [
     {:ex_aws, "~> 2.1"},
-    {:ex_aws_cognito_identity, "~> 1.0"},
+    {:ex_aws_cognito_identity, "~> 1.1"},
     {:jason, "~> 1.1"},
     {:hackney, "~> 1.14"},
   ]
